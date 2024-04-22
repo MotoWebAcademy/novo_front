@@ -89,12 +89,21 @@ async function displayRecentSearches() {
     data.recentSearches.forEach(search => {
       const searchItem = document.createElement('p');
       searchItem.textContent = search;
+      searchItem.style.display = 'inline-block'; // Adiciona estilo para exibir lado a lado
+      searchItem.style.marginRight = '10px'; // Adiciona margem para espaçamento entre os itens
+      searchItem.style.border = '1px solid #ccc'; // Adiciona borda cinza
+      searchItem.style.padding = '5px'; // Adiciona preenchimento interno para separar o texto da borda
+      searchItem.style.borderRadius = '5px'; // Arredonda as bordas
+      searchItem.style.boxShadow = '2px 2px 2px rgba(0, 0, 0, 0.1)'; // Adiciona sombra leve
       recentSearchesElement.appendChild(searchItem);
     });
   } catch (error) {
     console.error('Erro ao exibir as pesquisas recentes:', error.message);
   }
 }
+
+
+
 
 // Chama a função para exibir as pesquisas recentes quando a página é carregada
 window.addEventListener('load', displayRecentSearches);
