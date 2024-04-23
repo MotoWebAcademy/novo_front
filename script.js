@@ -100,6 +100,7 @@ async function displayRecentSearches() {
   } catch (error) {
     console.error('Erro ao exibir as pesquisas recentes:', error.message);
   }
+  
 }
 
 
